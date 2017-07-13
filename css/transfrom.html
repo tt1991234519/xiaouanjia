@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.mybox{
+				width:200px;
+				height: 200px;
+				background: pink;
+				margin: 0 auto;
+				transform: rotate(90deg)/*translateX(-10px)  */          /*skewY(30deg)*/           /*scale(0.8) */     /*rotate(30deg)*/;
+				transform-origin: left  top;
+			}
+			.box,.mypic{
+				width:200px;
+				height: 200px;
+				overflow: hidden;
+			}
+			.mypic{
+				transition:all  1s  ease ;
+				/*过渡              属性       时间   速度   延迟*/
+				/*不能加在hover   原始状态*/
+			}
+			.mypic:hover{
+				opacity: .5;
+				transform: rotate(30deg);
+				
+			}
+			.check input[type='checkbox']+label{
+				width: 78px;
+				height: 27px;
+				background:url(../img/kkk.png) no-repeat -52px 0;
+				display: block;
+				border-radius: 14px;
+				transition: all 1s ease;
+			}
+			/*按钮选中状态*/
+			.check input[type='checkbox']:checked+label{
+				background:url(../img/kkk.png) no-repeat 0 0;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="check">
+			<input type="checkbox"  id="switch" /><label for="switch"></label>
+		</div>
+		
+		
+		
+		
+		<div class="box">
+			<img src="../img/bg7.jpg" alt=""  class="mypic"/>
+		</div>
+		
+		
+		<div class="mybox"></div>
+	</body>
+</html>

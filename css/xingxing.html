@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/* 灰色背景星星5个平铺 */
+.star_bg {
+    width: 95px; height: 19px;
+    /*background: url(../img/shopimg/star.png) repeat-x;*/
+    position: relative;
+    overflow: hidden;
+}
+/* 这是5个小星星们的默认状态的定位 */
+.star {
+    height: 100%; width: 19px;
+    line-height: 6em;
+    position: absolute;
+    z-index: 3;
+    background: url(../img/shopimg/star.png) no-repeat top; 
+}
+.star_1 { left: 0; }
+.star_2 { left: 19px; }
+.star_3 { left: 38px; }
+.star_4 { left: 57px; }
+.star_5 { left: 76px; }
+
+/* 鼠标hover效果实现，分别显示背景与定宽 */
+/*.star:hover {    
+    background: url(../img/shopimg/star.png) repeat-x 0 -19px;
+    left: 0; z-index: 2;
+}*/
+.star_1:hover,.star_1.active { background: url(../img/shopimg/star.png) no-repeat bottom ; }
+.star_2:hover,.star_2.active { background: url(../img/shopimg/star.png) no-repeat bottom ; }
+.star_3:hover,.star_3.active { background: url(../img/shopimg/star.png) no-repeat bottom ; }
+.star_4:hover,.star_4.active { background: url(../img/shopimg/star.png) no-repeat bottom ; }
+.star_5:hover,.star_1.active { background: url(../img/shopimg/star.png) no-repeat bottom ; }
+		</style>
+	</head>
+	<body>
+		<div class="star_bg">
+    <a class="star star_1 " ></a>
+    <a class="star star_2 "></a>
+    <a class="star star_3 "></a>
+    <a class="star star_4 "></a>
+    <a class="star star_5"></a>
+</div>
+	</body>
+	<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.star_bg a').click(function(){
+			var star_bg=$(this).attr('class');
+			$(' a').addClass(' active')
+		})
+	</script>
+</html>

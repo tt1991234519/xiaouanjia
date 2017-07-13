@@ -1,0 +1,166 @@
+@import url('reset.css');
+
+
+div{ width:320px ; margin: 0 auto;}
+
+.container{
+    margin: 100px auto;
+    input[type="checkbox"]{
+        display: none;
+        &+label{
+            width: 50px;
+            height: 20px;
+            border-radius: 10px;
+            background: #ccc;
+            display: block;
+            position: relative;
+            b{
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: #fff;
+                position:absolute;
+                left:1px;
+                top:1px;
+                transition: 1s ease ;
+            }
+        }
+        &:checked+label{
+             background: dodgerblue;
+             b{
+                left:31px; 
+             }
+        }
+    }
+}
+
+
+.update{
+    input[type="checkbox"]{
+        //checkbox 不占位隐藏
+//      visibility: hidden;
+//      display: none;
+        opacity: 0;
+        position: absolute;
+        
+        &+label{
+           width: 78px;
+            height: 27px;
+            background:url(../img/kkk.png)  no-repeat -51px 0; 
+            //显示：块  
+            display: block; 
+            border-radius: 13px;
+            //transition 原始状态
+            transition:background-position 1s ease ;
+        }
+        &:checked+label{
+            background-position:0 0;
+        }
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+.box{
+    height: 40px;
+    width: 320px;
+    margin: 10px auto;
+    border: 1px #666 solid;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    p{
+        flex:1;
+        font-weight: bold;
+        padding-left: 20px;
+    }
+}
+.update1{ 
+    input[type="checkbox"]{
+        display: none;
+        &+label{
+            width:78px;
+            height: 27px;
+            background:url(../img/kkk.png) no-repeat -52px 0;
+            display: block;
+            margin-right: 10px;
+            border-radius: 13px;
+            transition:background-position 0.5s  ease ;
+        }
+        &:checked+label{
+            background-position: 0 0;
+        }
+    }   
+}
+
+.size{
+    input{
+        position:absolute;
+        opacity: 0;
+        &+label{
+            width:25px;
+            height:25px;
+            line-height:25px;
+            background:url(../img/an.png) no-repeat 0 -25px;
+            display:inline-block;
+            padding-left:30px;
+            -webkit-transition:background-position 0.1s linear;
+        }
+        &:checked+label{
+            background:url(../img/an.png) no-repeat 0 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.goods{
+    input{
+        position:absolute;
+        opacity: 0;
+        &+label{
+            width:35px;
+            height:35px;
+            background:url(../img/radio.png) no-repeat bottom;
+            display: block;
+        }
+        &:checked+label{
+            background:url(../img/radio.png) no-repeat;
+        }
+    }
+}
+
+
+.btn_check{
+    input{
+        position:absolute;
+        opacity: 0;
+        &+label{
+            width:25px;
+            height:25px;
+            background:url(../img/an.png) no-repeat 0 -75px;
+            display:inline-block;
+            padding-left: 30px;
+            line-height:25px;
+            -webkit-transition:background-position 0.1s linear;
+        }
+        &:checked+label{
+            background:url(../img/an.png) no-repeat 0 -100px;
+          
+        }
+    }
+    
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情页</title>	
+		<!--移动设备优先-->
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/shop.css" />
+		<script src="js/rem.js"></script>
+	</head>
+	
+	<body>
+		<div class="container">
+			<header class="header">
+				<h3 class="usecity">杭州西子湖四季三星级商务全国连锁</h3>
+			</header>
+			
+			<section class="main">
+				<div class="shop-head">
+					<div class="headpic">
+						<img src="img/shopimg/headimg.png" />
+						<img src="img/shopimg/dayang.png" class="dayang" />
+					</div>
+					<div class="headtxt">
+						<img src="img/shopimg/biaoji.png" class="tongpai changtongpai" /><br>
+						<p class="kindft">商品 <span class="num">22</span>种 丨 商品 <span class="num">22</span>种</p>						
+					</div>
+					<div class="star"></div>
+				</div>
+				<div class="zhuangxiu">
+					<img src="img/shopimg/weixiu.png" class="weixiu"/>
+					<span class="weixiutishi">店铺正在装修，敬请期待~</span>
+				</div>
+				
+			</section>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(' .goodsinfo',).click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+			$('.list-item',).click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+		</script>
+	</body>
+</html>
